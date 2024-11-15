@@ -1,0 +1,33 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+}
+
+.texts-box{
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    align-items: start;
+    gap: 5rem;
+    background-color: white;
+    padding: 3rem;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+.one-text-box h2{
+    font-size: 4rem;
+    font-family: "Kanit", sans-serif;
+}
+
+.one-text-box p{
+    font-size: 2rem;
+    font-family: "Geist Mono", monospace;
+}

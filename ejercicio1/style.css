@@ -1,0 +1,62 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://www.vodacombusiness.co.za/sites/vodacombusinesscoza/files/styles/extra_large_landscape/public/2022-11/vb_desktopbanner_1920x720_iphone_14_pro1.jpg?itok=i2n1frC_");
+}
+.company-name-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    height: 16vh;
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
+    border: .5rem solid black;
+    color: white;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.links-box{
+    width: 70vw;
+    height: 10vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: .5rem solid black;
+    font-size: 3.5rem;
+    font-family: "Geist Mono", monospace;
+    gap: 10rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding-left: 5rem;
+
+}
+
+.middle{
+    width: 70vw;
+    height: 2rem;
+    background-color: grey;
+}
