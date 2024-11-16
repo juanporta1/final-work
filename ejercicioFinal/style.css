@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Oxygen:wght@300&display=swap');
+
+:root{
+    /* 93.90625vw First Option */
+    /* 70vw Second Option */
+    /* 68vw Most Feasible Option*/
+    --main-box-size: 68vw;
+}
 html, body {
  margin: 0;
  word-wrap: break-word;
@@ -8,26 +15,41 @@ html, body {
  font-family: "Poppins", sans-serif;
  font-size: 16px;
 }
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+a{
+    text-decoration: none;
+}
 
 .main{
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15.25rem;
     justify-content: center;
+    margin-top: 2.875rem;
+    margin-bottom: 14.25rem;
 }
 
 header{
     display: flex;
-    width: 93,90625vw;
-
+    width: var(--main-box-size);
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo{
+.text-logo{
     font-family: "Orbitron", sans-serif;
     font-weight: 800;
     color: blue;
     font-size: 1.5rem;
+    transition: all 1s ease;
 }
 
 .links-box{
@@ -41,10 +63,241 @@ header{
     font-family: "DM Sans";
     font-size: 1.25rem;
     color: #666;
+    user-select: none;
+    transition: all .3s;
+}
+.link:hover{
+    cursor: pointer;
+    color: #000;
+    transition: all .3s;
 }
 
 .social-media{
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
+.social-medias-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.greeting-box{
+    display: flex;
+    width: var(--main-box-size);
+    justify-content: space-between;
+    align-items: center;
+    gap: 7.5rem;
+    font-size: 3.625rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #42446E;
+    line-height: -.0625rem;
+}
+
+.greeting-box img{
+    width: 21.875rem;
+    height: 21.875rem;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(to bottom, #E70FAA, #00C0FD);
+    display: inline-block;
+    background-clip: padding-box;
+    border: 5px solid transparent;
+}
+
+.fade-text{
+    background: linear-gradient(to right, #13B0F5, #E70FAA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stack{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 7.375rem;
+    margin-bottom: 7rem;
+    transition: all 1s ease;
+
+}
+
+.title-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 3rem;
+    color: #42446E;
+}
+.subtitle{
+    font-family: "Poppins";
+    font-size: 2rem;
+    color: #666;
+}
+
+.logos-box{
+    
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 6.375rem ;
+}
+
+.logo{
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.projects{
+    margin-top: 6.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    transition: all 1s ease;
+
+}
+
+.cards-box{
+    display: grid;
+    grid-template-columns: 25rem 25rem 25rem;
+    grid-template-rows: 1fr 1fr;
+
+    gap:3.875rem 2.75rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 5rem #666;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.information-box{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.card-title{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    color: #42446E;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.card-info{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+    color: #666;
+    font-weight: lighter;
+}
+
+.card-stack{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #42446E;
+    font-weight: lighter;
+    text-align: justify;
+    
+}
+.card-stack span{
+    font-weight: normal;
+}
+
+.card-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: #000;
+    
+}
+.card-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card-link img{
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--main-box-size);
+    transition: all 1s ease;
+
+}
+
+.up{
+    display: flex;
+    margin-top: 6.375rem;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--main-box-size);
+    padding-bottom: 2.625rem;
+    box-shadow: 0 .1rem 0 #9c9c9c;
+    .footer-logo{
+        display: flex;
+        justify-content: start;
+    }
+
+    .footer-information{
+        display: flex;
+        justify-content: center;
+        gap: 4.5rem;
+    }
+    
+}
+
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.75rem;
+    margin-top: 3.75rem;
+    .extra-info{
+        span{
+            span{
+                background: linear-gradient(to right, #E70FAA, #41378c);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
